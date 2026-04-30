@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Lock, Mail, Upload, User } from "lucide-react";
-import type { InscriptionType } from "../../types/types";
+import type { InscriptionType } from "../../../types/types";
 export function Inscription({
   formInscription,
   handleSubmitInscription,

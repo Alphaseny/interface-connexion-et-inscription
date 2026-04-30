@@ -3,8 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import useChangeInput from "../hooks/use-change-input.hook";
 import useSubmit from "../hooks/use-submit.hook";
-import { Inscription } from "../inscription";
 import { Connexion } from "./connexion";
+import { Inscription } from "./inscription";
 
 export default function Formulaire() {
   const [isLoginMode, setIsLoginMode] = useState(false);

@@ -1,73 +1,90 @@
-# React + TypeScript + Vite
+# 🔐 Formulaire d’authentification animé (React + Tailwind + Framer Motion)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est un composant d’authentification moderne avec interface animée, comprenant la connexion et l’inscription avec une transition fluide entre les deux modes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Aperçu
 
-## React Compiler
+Ce formulaire propose une expérience utilisateur moderne avec :
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Animation fluide entre connexion et inscription
+- Panneau latéral dynamique avec transitions
+- Inputs stylisés avec icônes
+- Gestion des formulaires via hooks personnalisés
+- Design glassmorphism
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧱 Stack technique
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- Tailwind CSS
+- Framer Motion
+- Lucide Icons
+- TypeScript
+- Hooks personnalisés (useChangeInput, useSubmit)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Structure du projet
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+components/
+├── Connexion.tsx
+├── Inscription.tsx
+├── Formulaire.tsx
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+hooks/
+├── use-change-input.hook.ts
+├── use-submit.hook.ts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+types/
+├── types.ts
+
+---
+
+## 🚀 Fonctionnalités
+
+### 🔑 Connexion
+
+- Email
+- Mot de passe
+- Gestion d’état contrôlée
+- Reset automatique après succès
+
+### 📝 Inscription
+
+- Prénom
+- Nom
+- Email
+- Mot de passe
+- Upload d’image
+- Gestion complète du formulaire
+
+### 🎭 Animations UI
+
+- Transition fluide login ↔ register
+- Panneau latéral animé
+- Entrées et sorties avec Framer Motion
+- Effet moderne type SaaS
+
+---
+
+## 🎨 Design
+
+- Glassmorphism (blur + transparence)
+- Gradient bleu/violet moderne
+- Inputs avec focus interactif
+- Boutons animés hover
+- UI propre et centrée
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/Alphaseny/interface-connexion-et-inscription.git
+cd interface-connexion-et-inscription
+npm install
+npm run dev
 ```
